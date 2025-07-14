@@ -1,0 +1,110 @@
+/* comprasview.css */
+
+/* Fondo general */
+.root {
+    -fx-background-color: #1f1f2e;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+/* Tabla */
+.table-view {
+    -fx-background-color: #2a2a3b;
+    -fx-border-color: transparent;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-text-fill: white;
+    -fx-table-cell-border-color: transparent;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #ff6f00;
+}
+
+.table-view .column-header, 
+.table-view .filler {
+    -fx-size: 40px;
+    -fx-border-color: transparent;
+}
+
+.table-view .table-row-cell {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-text-fill: white;
+}
+
+.table-view .table-row-cell:filled:selected {
+    -fx-background-color: #ff8a00;
+    -fx-text-fill: white;
+}
+
+/* Etiquetas */
+.label {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}
+
+/* Título */
+.label-title {
+    -fx-text-fill: linear-gradient(to right, #ff6f00, #ff8a00);
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+}
+
+/* Campos de texto */
+.text-field {
+    -fx-background-color: #3a3a50;
+    -fx-text-fill: white;
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+    -fx-border-color: transparent;
+}
+
+/* DatePicker */
+.date-picker {
+    -fx-background-color: #3a3a50;
+    -fx-text-fill: white;
+    -fx-background-radius: 6px;
+}
+
+/* RadioButtons */
+.radio-button {
+    -fx-text-fill: white;
+}
+
+.radio-button .radio {
+    -fx-border-color: #ff8a00;
+    -fx-background-color: transparent;
+}
+
+.radio-button:selected .radio {
+    -fx-mark-color: #ff8a00;
+}
+
+/* Botones */
+.button {
+    -fx-background-color: #ff6f00;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 4, 0.2, 0, 2);
+}
+
+.button:hover {
+    -fx-background-color: #ff8a00;
+}
+
+.button:pressed {
+    -fx-background-color: #e65100;
+}
+
+/* Estilo específico para botón regresar (por si se reutiliza clase) */
+.btnRegresar {
+    -fx-background-color: #ff6f00;
+}
+
+/* Imagen ovalada */
+.img-ovalada {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0.1, 0, 2);
+    -fx-background-radius: 50%;
+}

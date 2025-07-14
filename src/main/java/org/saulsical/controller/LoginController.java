@@ -17,7 +17,7 @@ import org.saulsical.system.Main;
 public class LoginController implements Initializable {
 
     @FXML private TextField txtEmail;
-    @FXML private PasswordField txtPassword;
+    @FXML private TextField txtPassword;
     @FXML private Button btnIngresar;
     
     private Main principal;

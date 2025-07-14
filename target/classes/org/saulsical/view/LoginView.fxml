@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="757.0" stylesheets="@../resource/loginview.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fundacionkinal.controller.LoginController">
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="757.0" stylesheets="@../resource/loginview.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.saulsical.controller.LoginController">
    <children>
       <ImageView fitHeight="183.0" fitWidth="180.0" layoutX="289.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="289.0" AnchorPane.rightAnchor="288.0">
          <image>
@@ -39,9 +39,9 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <TextField prefHeight="36.0" prefWidth="270.0" GridPane.columnIndex="1" />
-            <TextField prefHeight="36.0" prefWidth="270.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="100.0" styleClass="btnRegresar" stylesheets="@../resource/facturaview.css" text="INGRESAR" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txtEmail" prefHeight="36.0" prefWidth="270.0" GridPane.columnIndex="1" />
+            <TextField fx:id="txtPassword" prefHeight="36.0" prefWidth="270.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="btnIngresar" mnemonicParsing="false" prefHeight="34.0" prefWidth="100.0" styleClass="btnRegresar" stylesheets="@../resource/facturaview.css" text="INGRESAR" GridPane.columnIndex="1" GridPane.rowIndex="2" />
          </children>
       </GridPane>
    </children>

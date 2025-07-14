@@ -1,6 +1,5 @@
 package org.saulsical.system;
 
-
 import java.io.InputStream;
 import javafx.application.Application;
 import static javafx.application.Application.launch;
@@ -73,7 +72,7 @@ public class Main extends Application {
     // Vista Menú Principal (después del login)
     public void getMenuPrincipalView() {
         try {
-            MenuPrincipalController control = (MenuPrincipalController) cambiarEscena("VistaMenu.fxml", 1000, 900);
+            MenuPrincipalController control = (MenuPrincipalController) cambiarEscena("MenuPrincipalView.fxml", 1000, 900);
             control.setPrincipal(this);
         } catch (Exception ex) {
             System.out.println("Error al ir al Menú Principal: " + ex.getMessage());
