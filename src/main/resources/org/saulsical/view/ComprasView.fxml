@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
@@ -34,20 +36,21 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <GridPane layoutX="27.0" layoutY="96.0" prefHeight="219.0" prefWidth="932.0" styleClass="grid-pane" stylesheets="@../resource/facturaview.css" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="41.0">
+      <GridPane layoutX="27.0" layoutY="96.0" prefHeight="210.0" prefWidth="944.0" styleClass="grid-pane" stylesheets="@../resource/facturaview.css" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="29.0">
          <columnConstraints>
             <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="156.0" minWidth="10.0" prefWidth="138.0" />
             <ColumnConstraints fillWidth="false" halignment="LEFT" hgrow="SOMETIMES" maxWidth="351.0" minWidth="10.0" prefWidth="321.0" />
             <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="266.0" minWidth="10.0" prefWidth="164.0" />
-            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="266.0" minWidth="10.0" prefWidth="49.0" />
+            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="266.0" minWidth="10.0" prefWidth="77.0" />
             <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="404.0" minWidth="10.0" prefWidth="203.0" />
          </columnConstraints>
          <rowConstraints>
             <RowConstraints />
             <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="92.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="116.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="116.0" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="92.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="116.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="116.0" minHeight="8.0" prefHeight="29.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="116.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
             <Label text="ID" GridPane.rowIndex="1">
@@ -71,39 +74,51 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
-            <TextField fx:id="txtTotal" prefHeight="36.0" prefWidth="275.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
             <DatePicker fx:id="dpFecha" prefHeight="36.0" prefWidth="275.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Button fx:id="btnReporte" mnemonicParsing="false" prefHeight="41.0" prefWidth="113.0" styleClass="btnRegresar" stylesheets="@../resource/facturaview.css" text="REPORTE" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="4">
+            <Button fx:id="btnReporte" mnemonicParsing="false" prefHeight="43.0" prefWidth="117.0" styleClass="btnRegresar" stylesheets="@../resource/facturaview.css" text="REPORTE" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="5">
                <font>
                   <Font name="System Bold Italic" size="12.0" />
                </font>
             </Button>
             <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="295.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <children>
-                  <RadioButton fx:id="rbPendienteCompra" alignment="CENTER_LEFT" mnemonicParsing="false" prefHeight="19.0" prefWidth="121.0" text="PENDIENTE">
+                  <RadioButton fx:id="rbPendienteCompra" alignment="CENTER_LEFT" mnemonicParsing="false" prefHeight="19.0" prefWidth="95.0" text="PENDIENTE">
                      <toggleGroup>
                         <ToggleGroup fx:id="tgEstadoCompra" />
                      </toggleGroup>
                   </RadioButton>
                   <RadioButton fx:id="rbCancelada" mnemonicParsing="false" prefHeight="19.0" prefWidth="102.0" text="CANCELADA" toggleGroup="$tgEstadoCompra" />
+                  <RadioButton fx:id="rbCompletada" mnemonicParsing="false" prefHeight="19.0" prefWidth="118.0" text="COMPLETADA" toggleGroup="$tgEstadoCompra" />
                </children>
             </HBox>
             <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
                <children>
-                  <RadioButton fx:id="rbPendientePago" alignment="CENTER_LEFT" mnemonicParsing="false" prefHeight="17.0" prefWidth="97.0" text="PENDIENTE">
+                  <RadioButton fx:id="rbPendientePago" alignment="CENTER_LEFT" mnemonicParsing="false" prefHeight="17.0" prefWidth="97.0" text="EFECTIVO">
                      <toggleGroup>
                         <ToggleGroup fx:id="tgEstadoPago" />
                      </toggleGroup>
                   </RadioButton>
-                  <RadioButton fx:id="rbPagado" mnemonicParsing="false" prefHeight="17.0" prefWidth="91.0" text="PAGADO" toggleGroup="$tgEstadoPago" />
+                  <RadioButton fx:id="rbPagado" mnemonicParsing="false" prefHeight="17.0" prefWidth="91.0" text="TARJETA" toggleGroup="$tgEstadoPago" />
                </children>
             </HBox>
-            <RadioButton fx:id="rbCompletada" mnemonicParsing="false" prefHeight="19.0" prefWidth="137.0" text="COMPLETADA" toggleGroup="$tgEstadoCompra" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <Label text="PAGO" GridPane.columnIndex="3" GridPane.rowIndex="1">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
+            <Label text="CLIENTE" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <ComboBox prefHeight="32.0" prefWidth="284.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label text="EMPLEADO" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <ComboBox prefHeight="32.0" prefWidth="222.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <Spinner prefHeight="31.0" prefWidth="204.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
          </children>
       </GridPane>
       <ImageView fitHeight="80.0" fitWidth="233.0" layoutX="27.0" layoutY="8.0" pickOnBounds="true" styleClass="img-ovalada">
