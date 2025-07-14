@@ -7,6 +7,7 @@ package org.saulsical.controller;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
+import org.saulsical.system.Main;
 
 /**
  * FXML Controller class
@@ -15,9 +16,12 @@ import javafx.fxml.Initializable;
  */
 public class ComprasController implements Initializable {
 
-    /**
-     * Initializes the controller class.
-     */
+    private Main principal;
+
+    public void setPrincipal(Main principal) {
+        this.principal = principal;
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO

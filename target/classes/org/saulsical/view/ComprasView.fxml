@@ -22,7 +22,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1000.0" styleClass="root" stylesheets="@../resource/comprasview.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fundacionkinal.controller.ComprasController">
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1000.0" styleClass="root" stylesheets="@../resource/comprasview.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.saulsical.controller.ComprasController">
    <children>
       <TableView fx:id="tablaCompras" layoutX="27.0" layoutY="330.0" prefHeight="341.0" prefWidth="932.0" stylesheets="@../resource/facturaview.css" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="41.0">
          <columns>
@@ -147,7 +147,7 @@
             </LinearGradient>
          </textFill>
       </Label>
-      <Button fx:id="btnRegresar" contentDisplay="TOP" layoutX="868.0" layoutY="11.0" mnemonicParsing="false" onAction="#btnRegresarActionEvent" prefHeight="80.0" prefWidth="110.0" styleClass="btnRegresar" stylesheets="@../resource/facturaview.css" text="RETURN" textFill="WHITE" AnchorPane.rightAnchor="41.0">
+      <Button fx:id="btnRegresar" contentDisplay="TOP" layoutX="868.0" layoutY="11.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="110.0" styleClass="btnRegresar" stylesheets="@../resource/facturaview.css" text="RETURN" textFill="WHITE" AnchorPane.rightAnchor="41.0">
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font>

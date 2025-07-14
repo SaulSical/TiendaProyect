@@ -79,6 +79,15 @@ public class Main extends Application {
             ex.printStackTrace();
         }
     }
+    public void getComprasView() {
+        try {
+            MenuPrincipalController control = (MenuPrincipalController) cambiarEscena("ComprasView.fxml", 1000, 900);
+            control.setPrincipal(this);
+        } catch (Exception ex) {
+            System.out.println("Error al ir a Compras: " + ex.getMessage());
+            ex.printStackTrace();
+        }
+    }
 
     // Puedes agregar otras vistas como getIngresoView(), getProductosView(), etc. si es necesario
 }
