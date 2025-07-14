@@ -8,8 +8,11 @@ create table Clientes (
     nombreCliente varchar(64), 
     apellidoCliente varchar(64),
     nitCliente varchar(20), 
+    correoCliente varchar(64) unique,
+    contrasenaCliente varchar(64),
     constraint pk_cliente primary key (idCliente)
 ); 
+
 
 -- Empleados
 create table Empleados (
@@ -40,8 +43,9 @@ create table Ventas (
     idCliente int, 
     idEmpleado int,  
     fechaVenta datetime,
+    total double,
     metodoPago enum('Efectivo','Tarjeta'), 
-    estadoPago enum('Pagado','Pendiente'), 
+    estadoPago enum('Canelado','Pendiente','Completado'), 
     constraint pk_venta primary key (idVenta),
     constraint fk_venta_cliente foreign key (idCliente) references Clientes(idCliente),
     constraint fk_venta_empleado foreign key (idEmpleado) references Empleados(idEmpleado)
@@ -60,17 +64,47 @@ create table DetalleVenta (
 
 -- Procedimientos CRUD (sólo ejemplos de Clientes y Productos, los otros son similares)
 
--- Agregar cliente
 delimiter $$
 create procedure sp_agregarCliente(
     in p_nombreCliente varchar(64), 
     in p_apellidoCliente varchar(64), 
-    in p_nitCliente varchar(20))
+    in p_nitCliente varchar(20),
+    in p_correoCliente varchar(64),
+    in p_contrasenaCliente varchar(64))
 begin 
-	insert into Clientes (nombreCliente, apellidoCliente, nitCliente)
-	values(p_nombreCliente, p_apellidoCliente, p_nitCliente); 
+	insert into Clientes (
+        nombreCliente, 
+        apellidoCliente, 
+        nitCliente, 
+        correoCliente, 
+        contrasenaCliente
+    )
+	values(
+        p_nombreCliente, 
+        p_apellidoCliente, 
+        p_nitCliente, 
+        p_correoCliente, 
+        p_contrasenaCliente
+    ); 
 end$$
 delimiter ;
+
+delimiter //
+create procedure sp_agregar_venta (
+    in p_idCliente int,
+    in p_idEmpleado int,
+    in p_fechaVenta datetime,
+    in p_total double,
+    in p_metodoPago enum('Efectivo','Tarjeta'),
+    in p_estadoPago enum('Canelado','Pendiente','Completado')
+)
+begin
+    insert into ventas (idCliente, idEmpleado, fechaVenta, total, metodoPago, estadoPago)
+    values (p_idCliente, p_idEmpleado, p_fechaVenta, p_total, p_metodoPago, p_estadoPago);
+end;
+//
+delimiter ;
+
 
 -- Listar productos
 delimiter $$
@@ -101,9 +135,45 @@ begin
 end$$
 delimiter ;
 
+delimiter //
+create procedure sp_actualizar_venta (
+    in p_idVenta int,
+    in p_idCliente int,
+    in p_idEmpleado int,
+    in p_fechaVenta datetime,
+    in p_total double,
+    in p_metodoPago enum('Efectivo','Tarjeta'),
+    in p_estadoPago enum('Canelado','Pendiente','Completado')
+)
+begin
+    update ventas
+    set idCliente = p_idCliente,
+        idEmpleado = p_idEmpleado,
+        fechaVenta = p_fechaVenta,
+        total = p_total,
+        metodoPago = p_metodoPago,
+        estadoPago = p_estadoPago
+    where idVenta = p_idVenta;
+end;
+//
+delimiter ;
+
+
+delimiter //
+create procedure sp_eliminar_venta (
+    in p_idVenta int
+)
+begin
+    delete from ventas
+    where idVenta = p_idVenta;
+end;
+//
+delimiter ;
+
+
 -- Ejemplos de inserciones
-call sp_agregarCliente('Juan', 'Martínez', '1234567');
-call sp_agregarCliente('Laura', 'Hernández', '9876543');
+call sp_agregarCliente('Juan', 'Martínez', '1234567', 'juan@mail.com', '1234');
+call sp_agregarCliente('Laura', 'Hernández', '9876543', 'laura@mail.com', 'laura123');
 
 call sp_agregarProducto('The Legend of Zelda: Tears of the Kingdom', 'Videojuego', 'Nintendo Switch', 69.99, 'Aventura épica en mundo abierto');
 call sp_agregarProducto('PlayStation 5', 'Consola', 'Sony', 499.99, 'Consola de nueva generación');
