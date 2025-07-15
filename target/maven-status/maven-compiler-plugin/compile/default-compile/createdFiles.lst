@@ -1,21 +1,12 @@
 org\saulsical\model\Cliente.class
 org\saulsical\system\Main.class
 org\saulsical\controller\LoginController.class
-<<<<<<< HEAD
-=======
 org\saulsical\controller\Factura2Controller.class
 org\saulsical\controller\ProductosController.class
->>>>>>> ft/denis
 org\saulsical\controller\ComprasController$EstadoFormulario.class
 org\saulsical\model\Empleado.class
 org\saulsical\controller\MenuPrincipalController.class
 org\saulsical\model\Compra.class
-<<<<<<< HEAD
-org\saulsical\controller\ClientesController.class
-org\saulsical\controller\EmpleadosController.class
-org\saulsical\controller\ComprasController.class
-=======
 org\saulsical\controller\ComprasController.class
 org\saulsical\controller\Factura1Controller.class
->>>>>>> ft/denis
 org\saulsical\conexion\Conexion.class

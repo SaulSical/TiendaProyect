@@ -5,12 +5,7 @@ C:\TiendaProyect\src\main\java\org\saulsical\controller\MenuPrincipalController.
 C:\TiendaProyect\src\main\java\org\saulsical\conexion\Conexion.java
 C:\TiendaProyect\src\main\java\org\saulsical\model\Empleado.java
 C:\TiendaProyect\src\main\java\org\saulsical\system\Main.java
-<<<<<<< HEAD
-C:\TiendaProyect\src\main\java\org\saulsical\controller\ClientesController.java
-C:\TiendaProyect\src\main\java\org\saulsical\controller\EmpleadosController.java
-=======
 C:\TiendaProyect\src\main\java\org\saulsical\controller\Factura1Controller.java
 C:\TiendaProyect\src\main\java\org\saulsical\controller\Factura2Controller.java
 C:\TiendaProyect\src\main\java\org\saulsical\controller\ProductosController.java
->>>>>>> ft/denis
 C:\TiendaProyect\src\main\java\org\saulsical\model\Cliente.java

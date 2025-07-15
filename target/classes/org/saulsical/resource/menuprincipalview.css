@@ -1,11 +1,9 @@
-<<<<<<< HEAD
 /*
  * Empty Stylesheet file.
  */
 
 .mainFxmlClass {
 
-=======
 /* facturaview.css */
 
 /* Fondo general */
@@ -90,5 +88,4 @@
 /* Extra: sombras en los AnchorPane interiores si quieres más profundidad */
 .anchor-pane {
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0.2, 2, 2);
->>>>>>> ft/denis
 }
