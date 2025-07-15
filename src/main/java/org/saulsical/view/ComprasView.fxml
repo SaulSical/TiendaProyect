@@ -24,11 +24,11 @@
    <children>
       <TableView fx:id="tablaCompras" layoutX="27.0" layoutY="330.0" prefHeight="341.0" prefWidth="932.0" stylesheets="@../resource/facturaview.css" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="41.0">
          <columns>
-            <TableColumn fx:id="colId" prefWidth="75.0" text="ID" />
-            <TableColumn fx:id="colTotal" prefWidth="139.0" text="TOTAL" />
-            <TableColumn fx:id="colEstadoCompra" prefWidth="208.0" text="ESTADO DE COMPRA" />
-            <TableColumn fx:id="colEstadoPago" prefWidth="196.0" text="ESTADO DE PAGO" />
-            <TableColumn fx:id="colFecha" prefWidth="191.0" text="FECHA" />
+            <TableColumn prefWidth="75.0" text="ID" />
+            <TableColumn prefWidth="139.0" text="TOTAL" />
+            <TableColumn prefWidth="208.0" text="ESTADO DE COMPRA" />
+            <TableColumn prefWidth="196.0" text="ESTADO DE PAGO" />
+            <TableColumn prefWidth="191.0" text="FECHA" />
          </columns>
          <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
@@ -37,17 +37,17 @@
       <GridPane layoutX="27.0" layoutY="96.0" prefHeight="219.0" prefWidth="932.0" styleClass="grid-pane" stylesheets="@../resource/facturaview.css" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="41.0">
          <columnConstraints>
             <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="156.0" minWidth="10.0" prefWidth="138.0" />
-            <ColumnConstraints fillWidth="false" halignment="LEFT" hgrow="SOMETIMES" maxWidth="351.0" minWidth="10.0" prefWidth="321.0" />
-            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="266.0" minWidth="10.0" prefWidth="164.0" />
-            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="266.0" minWidth="10.0" prefWidth="49.0" />
-            <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="404.0" minWidth="10.0" prefWidth="203.0" />
+            <ColumnConstraints fillWidth="false" halignment="LEFT" hgrow="SOMETIMES" maxWidth="546.0" minWidth="10.0" prefWidth="293.0" />
+            <ColumnConstraints fillWidth="false" halignment="LEFT" hgrow="SOMETIMES" maxWidth="546.0" minWidth="10.0" prefWidth="228.0" />
+            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="266.0" minWidth="10.0" prefWidth="46.0" />
+            <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="404.0" minWidth="10.0" prefWidth="238.0" />
          </columnConstraints>
          <rowConstraints>
             <RowConstraints />
-            <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="92.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="116.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="116.0" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="85.0" minHeight="10.0" prefHeight="61.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="92.0" minHeight="10.0" prefHeight="85.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="116.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="116.0" minHeight="8.0" prefHeight="27.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
             <Label text="ID" GridPane.rowIndex="1">
@@ -55,7 +55,7 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
-            <TextField fx:id="txtId" prefHeight="36.0" prefWidth="275.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField prefHeight="36.0" prefWidth="275.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <Label text="FECHA" GridPane.rowIndex="2">
                <font>
                   <Font name="System Bold" size="15.0" />
@@ -66,39 +66,24 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
-            <Label text="ESTADO COMPRA" GridPane.rowIndex="3">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </Label>
-            <TextField fx:id="txtTotal" prefHeight="36.0" prefWidth="275.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-            <DatePicker fx:id="dpFecha" prefHeight="36.0" prefWidth="275.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Button fx:id="btnReporte" mnemonicParsing="false" prefHeight="41.0" prefWidth="113.0" styleClass="btnRegresar" stylesheets="@../resource/facturaview.css" text="REPORTE" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="4">
+            <TextField prefHeight="36.0" prefWidth="230.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <DatePicker prefHeight="36.0" prefWidth="275.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" prefHeight="41.0" prefWidth="113.0" styleClass="btnRegresar" stylesheets="@../resource/facturaview.css" text="REPORTE" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="3">
                <font>
                   <Font name="System Bold Italic" size="12.0" />
                </font>
             </Button>
-            <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="295.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
-               <children>
-                  <RadioButton fx:id="rbPendienteCompra" alignment="CENTER_LEFT" mnemonicParsing="false" prefHeight="19.0" prefWidth="121.0" text="PENDIENTE">
-                     <toggleGroup>
-                        <ToggleGroup fx:id="tgEstadoCompra" />
-                     </toggleGroup>
-                  </RadioButton>
-                  <RadioButton fx:id="rbCancelada" mnemonicParsing="false" prefHeight="19.0" prefWidth="102.0" text="CANCELADA" toggleGroup="$tgEstadoCompra" />
-               </children>
-            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="295.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
                <children>
-                  <RadioButton fx:id="rbPendientePago" alignment="CENTER_LEFT" mnemonicParsing="false" prefHeight="17.0" prefWidth="97.0" text="PENDIENTE">
+                  <RadioButton alignment="CENTER_LEFT" mnemonicParsing="false" prefHeight="17.0" prefWidth="97.0" text="PENDIENTE">
                      <toggleGroup>
                         <ToggleGroup fx:id="tgEstadoPago" />
                      </toggleGroup>
                   </RadioButton>
-                  <RadioButton fx:id="rbPagado" mnemonicParsing="false" prefHeight="17.0" prefWidth="91.0" text="PAGADO" toggleGroup="$tgEstadoPago" />
+                  <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="91.0" text="PAGADO" toggleGroup="$tgEstadoPago" />
                </children>
             </HBox>
-            <RadioButton fx:id="rbCompletada" mnemonicParsing="false" prefHeight="19.0" prefWidth="137.0" text="COMPLETADA" toggleGroup="$tgEstadoCompra" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <Label text="PAGO" GridPane.columnIndex="3" GridPane.rowIndex="1">
                <font>
                   <Font name="System Bold" size="15.0" />
@@ -106,12 +91,7 @@
             </Label>
          </children>
       </GridPane>
-      <ImageView fitHeight="80.0" fitWidth="233.0" layoutX="27.0" layoutY="8.0" pickOnBounds="true" styleClass="img-ovalada">
-         <image>
-            <Image url="@../image/Naranja.png" />
-         </image>
-      </ImageView>
-      <Label layoutX="106.0" layoutY="14.0" prefHeight="66.0" prefWidth="157.0" styleClass="label-title" stylesheets="@../resource/facturaview.css" text="COMPRA" textAlignment="CENTER" AnchorPane.leftAnchor="106.0">
+      <Label layoutX="106.0" layoutY="14.0" prefHeight="66.0" prefWidth="157.0" styleClass="label-title" stylesheets="@../resource/facturaview.css" text="COMPRAS" textAlignment="CENTER" AnchorPane.leftAnchor="106.0">
          <font>
             <Font name="Bell MT" size="30.0" />
          </font>
@@ -132,21 +112,21 @@
             </LinearGradient>
          </textFill>
       </Label>
-      <Button fx:id="btnRegresar" contentDisplay="TOP" layoutX="868.0" layoutY="11.0" mnemonicParsing="false" onAction="#btnRegresarActionEvent" prefHeight="80.0" prefWidth="110.0" styleClass="btnRegresar" stylesheets="@../resource/facturaview.css" text="RETURN" textFill="WHITE" AnchorPane.rightAnchor="41.0">
+      <Button contentDisplay="TOP" layoutX="868.0" layoutY="11.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="110.0" styleClass="btnRegresar" stylesheets="@../resource/facturaview.css" text="RETURN" textFill="WHITE" AnchorPane.rightAnchor="41.0">
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font>
          <graphic>
             <ImageView fitHeight="35.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../image/menua.png" />
+                  <Image url="@../imagen/return.png" />
                </image>
             </ImageView>
          </graphic>
       </Button>
       <ImageView fitHeight="61.0" fitWidth="50.0" layoutX="40.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../image/carrito.png" />
+            <Image url="@../imagen/compras.png" />
          </image>
       </ImageView>
    </children>
