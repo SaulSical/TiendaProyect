@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="895.0" prefWidth="1527.0" stylesheets="@../resource/comprasview.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fundacionkinal.controller.FacturaController">
+<AnchorPane id="AnchorPane" prefHeight="895.0" prefWidth="1527.0" stylesheets="@../resource/comprasview.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.saulsical.controller.Factura1Controller">
     <children>
         <GridPane alignment="TOP_CENTER" layoutX="22.0" layoutY="141.0" prefHeight="795.0" prefWidth="1273.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="779.0" AnchorPane.topAnchor="141.0">
             <columnConstraints>

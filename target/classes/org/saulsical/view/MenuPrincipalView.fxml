@@ -10,7 +10,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="606.0" prefWidth="1314.0" stylesheets="@../resource/menuprincipalview.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fundacionkinal.controller.MenuAdminController">
+<AnchorPane id="AnchorPane" prefHeight="606.0" prefWidth="1314.0" stylesheets="@../resource/menuprincipalview.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.saulsical.controller.MenuPrincipalController">
    <children>
       <TabPane layoutX="26.0" layoutY="69.0" prefHeight="517.0" prefWidth="1262.0" styleClass="grid-pane" stylesheets="@../resource/facturaview.css" tabClosingPolicy="UNAVAILABLE" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="26.0">
          <tabs>
