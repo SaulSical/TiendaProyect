@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<<<<<<< HEAD
 <?import java.lang.*?>
 <?import java.net.*?>
 <?import java.util.*?>
@@ -11,4 +12,72 @@
     <stylesheets>
         <URL value="@/org/saulsical/resource/menuprincipalview.css"/>
     </stylesheets>
+=======
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="606.0" prefWidth="1314.0" stylesheets="@../resource/menuprincipalview.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.saulsical.controller.MenuPrincipalController">
+   <children>
+      <TabPane layoutX="26.0" layoutY="69.0" prefHeight="517.0" prefWidth="1262.0" styleClass="grid-pane" stylesheets="@../resource/facturaview.css" tabClosingPolicy="UNAVAILABLE" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="26.0">
+         <tabs>
+            <Tab text="ADMINISTRATIVO">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="488.0" prefWidth="1119.0">
+                     <children>
+                        <Button fx:id="btnEmpleados" contentDisplay="TOP" layoutX="19.0" layoutY="8.0" mnemonicParsing="false" onAction="#clickManejadorEventos" prefHeight="152.0" prefWidth="134.0" styleClass="label-textField" stylesheets="@../resource/facturaview.css" text="PRODUCTOS">
+                           <graphic>
+                              <ImageView fitHeight="107.0" fitWidth="107.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imagen/productos.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnCompras" contentDisplay="TOP" layoutX="193.0" layoutY="8.0" mnemonicParsing="false" onAction="#clickManejadorEventos" prefHeight="152.0" prefWidth="134.0" styleClass="label-textField" stylesheets="@../resource/facturaview.css" text="COMPRAS">
+                           <graphic>
+                              <ImageView fitHeight="107.0" fitWidth="107.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imagen/compras.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnEmpleados1" contentDisplay="TOP" layoutX="372.0" layoutY="8.0" mnemonicParsing="false" onAction="#clickManejadorEventos" prefHeight="152.0" prefWidth="134.0" styleClass="label-textField" stylesheets="@../resource/facturaview.css" text="FACTURAS">
+                           <graphic>
+                              <ImageView fitHeight="107.0" fitWidth="107.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imagen/factura.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <MenuBar prefHeight="25.0" prefWidth="1314.0" styleClass="column-header" stylesheets="@../resource/facturaview.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <menus>
+          <Menu fx:id="itmCerrar" mnemonicParsing="false" onAction="#clickManejadorEventos" text="CERRAR SESION">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu fx:id="itmAcercaDe" mnemonicParsing="false" onAction="#clickManejadorEventos" text="AYUDA">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Acerca de nosotros" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+>>>>>>> ft/denis
 </AnchorPane>

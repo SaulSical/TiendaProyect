@@ -15,7 +15,11 @@
    <children>
       <ImageView fitHeight="183.0" fitWidth="180.0" layoutX="289.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="289.0" AnchorPane.rightAnchor="288.0">
          <image>
+<<<<<<< HEAD
             <Image url="@../imagen/LOGIN.png" />
+=======
+            <Image url="@../imagen/login.png" />
+>>>>>>> ft/denis
          </image>
       </ImageView>
       <GridPane layoutX="190.0" layoutY="205.0" prefHeight="183.0" prefWidth="378.0" styleClass="grid-pane" stylesheets="@../resource/facturaview.css" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="189.0">

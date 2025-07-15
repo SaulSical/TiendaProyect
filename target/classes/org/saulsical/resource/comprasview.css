@@ -1,5 +1,6 @@
 /* facturaview.css */
 
+<<<<<<< HEAD
 /* Style for the table itself */
 .table-view {
     -fx-base: #202020; /* Dark background for the table */
@@ -48,3 +49,58 @@
 .table-view .table-row-cell:hover {
     -fx-background-color: #505050; /* Lighter dark on hover */
 }
+=======
+/* Fondo del AnchorPane */
+.root {
+    -fx-background-color: #1e1e2f;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+/* GridPane que contiene los campos */
+.grid-pane {
+    -fx-background-color: #2c2c3e;
+    -fx-padding: 20px;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.75), 10, 0.2, 0, 4);
+}
+
+/* Labels de texto */
+.label {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-label-padding: 5px;
+}
+
+/* Campos de texto */
+.text-field {
+    -fx-background-color: #3a3a50;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: #cccccc;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-border-color: transparent;
+    -fx-font-size: 14px;
+}
+
+/* Botón de ingreso */
+.button.btnRegresar {
+    -fx-background-color: #00b894;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 4, 0.2, 0, 2);
+    -fx-font-size: 14px;
+}
+
+/* Hover del botón */
+.button.btnRegresar:hover {
+    -fx-background-color: #00cec9;
+}
+
+/* Botón presionado */
+.button.btnRegresar:pressed {
+    -fx-background-color: #019875;
+}
+>>>>>>> ft/denis

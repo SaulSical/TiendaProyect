@@ -10,7 +10,7 @@ import javafx.fxml.Initializable;
  *
  * @author denis
  */
-public class ClientesController implements Initializable {
+public class Factura1Controller implements Initializable {
 
     /**
      * Initializes the controller class.
