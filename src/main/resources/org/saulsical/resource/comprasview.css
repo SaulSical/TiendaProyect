@@ -1,6 +1,5 @@
 /* facturaview.css */
 
-<<<<<<< HEAD
 /* Style for the table itself */
 .table-view {
     -fx-base: #202020; /* Dark background for the table */
@@ -49,7 +48,6 @@
 .table-view .table-row-cell:hover {
     -fx-background-color: #505050; /* Lighter dark on hover */
 }
-=======
 /* Fondo del AnchorPane */
 .root {
     -fx-background-color: #1e1e2f;
@@ -103,4 +101,3 @@
 .button.btnRegresar:pressed {
     -fx-background-color: #019875;
 }
->>>>>>> ft/denis
