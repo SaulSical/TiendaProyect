@@ -10,6 +10,7 @@ import javafx.fxml.JavaFXBuilderFactory;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import org.saulsical.controller.ComprasController;
 import org.saulsical.controller.LoginController;
 import org.saulsical.controller.MenuPrincipalController;
 import org.saulsical.controller.MenuPrincipalController;
@@ -81,7 +82,7 @@ public class Main extends Application {
     }
     public void getComprasView() {
         try {
-            MenuPrincipalController control = (MenuPrincipalController) cambiarEscena("ComprasView.fxml", 1000, 900);
+            ComprasController control = (ComprasController) cambiarEscena("ComprasView.fxml", 1000, 900);
             control.setPrincipal(this);
         } catch (Exception ex) {
             System.out.println("Error al ir a Compras: " + ex.getMessage());

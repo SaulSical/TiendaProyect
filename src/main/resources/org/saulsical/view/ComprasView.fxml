@@ -27,16 +27,18 @@
       <TableView fx:id="tablaCompras" layoutX="27.0" layoutY="330.0" prefHeight="341.0" prefWidth="932.0" stylesheets="@../resource/facturaview.css" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="41.0">
          <columns>
             <TableColumn fx:id="colId" prefWidth="75.0" text="ID" />
-            <TableColumn fx:id="colTotal" prefWidth="139.0" text="TOTAL" />
-            <TableColumn fx:id="colEstadoCompra" prefWidth="208.0" text="ESTADO DE COMPRA" />
-            <TableColumn fx:id="colEstadoPago" prefWidth="196.0" text="ESTADO DE PAGO" />
-            <TableColumn fx:id="colFecha" prefWidth="191.0" text="FECHA" />
+            <TableColumn fx:id="colFecha" prefWidth="99.0" text="FECHA" />
+            <TableColumn fx:id="colEstadoCompra" prefWidth="169.0" text="ESTADO DE COMPRA" />
+            <TableColumn fx:id="colCliente" prefWidth="173.0" text="CLIENTE" />
+            <TableColumn fx:id="colFormaPago" prefWidth="137.0" text="FORMA DE PAGO" />
+            <TableColumn fx:id="colTotal" prefWidth="132.0" text="TOTAL" />
+            <TableColumn fx:id="colEmpleado" prefWidth="218.0" text="EMPLEADO" />
          </columns>
          <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <GridPane layoutX="27.0" layoutY="96.0" prefHeight="210.0" prefWidth="944.0" styleClass="grid-pane" stylesheets="@../resource/facturaview.css" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="29.0">
+      <GridPane layoutX="17.0" layoutY="80.0" prefHeight="210.0" prefWidth="944.0" styleClass="grid-pane" stylesheets="@../resource/facturaview.css" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="39.0">
          <columnConstraints>
             <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="156.0" minWidth="10.0" prefWidth="138.0" />
             <ColumnConstraints fillWidth="false" halignment="LEFT" hgrow="SOMETIMES" maxWidth="351.0" minWidth="10.0" prefWidth="321.0" />
@@ -93,12 +95,12 @@
             </HBox>
             <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
                <children>
-                  <RadioButton fx:id="rbPendientePago" alignment="CENTER_LEFT" mnemonicParsing="false" prefHeight="17.0" prefWidth="97.0" text="EFECTIVO">
+                  <RadioButton fx:id="rbEfectivo" alignment="CENTER_LEFT" mnemonicParsing="false" prefHeight="17.0" prefWidth="97.0" text="EFECTIVO">
                      <toggleGroup>
                         <ToggleGroup fx:id="tgEstadoPago" />
                      </toggleGroup>
                   </RadioButton>
-                  <RadioButton fx:id="rbPagado" mnemonicParsing="false" prefHeight="17.0" prefWidth="91.0" text="TARJETA" toggleGroup="$tgEstadoPago" />
+                  <RadioButton fx:id="rbTarjeta" mnemonicParsing="false" prefHeight="17.0" prefWidth="91.0" text="TARJETA" toggleGroup="$tgEstadoPago" />
                </children>
             </HBox>
             <Label text="PAGO" GridPane.columnIndex="3" GridPane.rowIndex="1">
@@ -111,14 +113,14 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
-            <ComboBox prefHeight="32.0" prefWidth="284.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <ComboBox fx:id="cbxCliente" prefHeight="32.0" prefWidth="284.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <Label text="EMPLEADO" GridPane.columnIndex="3" GridPane.rowIndex="3">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
-            <ComboBox prefHeight="32.0" prefWidth="222.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-            <Spinner prefHeight="31.0" prefWidth="204.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <ComboBox fx:id="cbxEmpleado" prefHeight="32.0" prefWidth="222.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <Spinner fx:id="spiTotal" prefHeight="31.0" prefWidth="204.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
          </children>
       </GridPane>
       <ImageView fitHeight="80.0" fitWidth="233.0" layoutX="27.0" layoutY="8.0" pickOnBounds="true" styleClass="img-ovalada">
@@ -147,7 +149,7 @@
             </LinearGradient>
          </textFill>
       </Label>
-      <Button fx:id="btnRegresar" contentDisplay="TOP" layoutX="868.0" layoutY="11.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="110.0" styleClass="btnRegresar" stylesheets="@../resource/facturaview.css" text="RETURN" textFill="WHITE" AnchorPane.rightAnchor="41.0">
+      <Button fx:id="btnRegresar" contentDisplay="TOP" layoutX="868.0" layoutY="11.0" mnemonicParsing="false" onAction="#clickManejadorEventos" prefHeight="80.0" prefWidth="110.0" styleClass="btnRegresar" stylesheets="@../resource/facturaview.css" text="RETURN" textFill="WHITE" AnchorPane.rightAnchor="41.0">
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font>
@@ -164,5 +166,10 @@
             <Image url="@../image/carrito.png" />
          </image>
       </ImageView>
+      <Button fx:id="btnNuevo" layoutX="322.0" layoutY="268.0" mnemonicParsing="false" onAction="#agregarGuardar" prefHeight="18.0" prefWidth="55.0" text="Nuevo" />
+      <Button fx:id="btnEditar" layoutX="391.0" layoutY="267.0" mnemonicParsing="false" onAction="#editarCompra" text="Editar" />
+      <Button fx:id="btnEliminar" layoutX="461.0" layoutY="267.0" mnemonicParsing="false" onAction="#EliminarCancelar" text="Eliminar" />
+      <Button fx:id="btnSiguiente" layoutX="161.0" layoutY="266.0" mnemonicParsing="false" onAction="#btnSiguienteAccion" text="&gt;&gt;&gt;&gt;" />
+      <Button fx:id="btnAnterior" layoutX="13.0" layoutY="266.0" mnemonicParsing="false" onAction="#btnAnteriorAccion" text="&lt;&lt;&lt;&lt;" />
    </children>
 </AnchorPane>

@@ -1,6 +1,10 @@
+org\saulsical\model\Cliente.class
 org\saulsical\system\Main.class
 org\saulsical\controller\LoginController.class
+org\saulsical\controller\ComprasController$EstadoFormulario.class
+org\saulsical\model\Empleado.class
 org\saulsical\controller\MenuPrincipalController.class
+org\saulsical\model\Compra.class
 org\saulsical\controller\ClientesController.class
 org\saulsical\controller\EmpleadosController.class
 org\saulsical\controller\ComprasController.class
