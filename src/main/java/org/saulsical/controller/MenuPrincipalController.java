@@ -6,6 +6,8 @@ package org.saulsical.controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import org.saulsical.system.Main;
 
@@ -27,5 +29,11 @@ public class MenuPrincipalController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+    
+    @FXML
+    private void clickManejadorEventos(ActionEvent event) {
+        // Aquí va la lógica de respuesta a los botones y menús
+        System.out.println("Evento detectado: " + event.getSource());
+    }
     
 }

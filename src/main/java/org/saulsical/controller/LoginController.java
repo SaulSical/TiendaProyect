@@ -50,7 +50,7 @@ public class LoginController implements Initializable {
 
             if (rs.next()) {
                 mostrarAlerta("Éxito", "Bienvenido " + rs.getString("nombreCliente") + " " + rs.getString("apellidoCliente"));
-                principal.getComprasView();
+                principal.getMenuPrincipalView();
                 // Aquí podrías redirigir a una vista principal
             } else {
                 mostrarAlerta("Error", "Correo o contraseña incorrectos.");
