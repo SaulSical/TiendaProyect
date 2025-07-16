@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.net.URL?>
-<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1000.0"
-            styleClass="root"
-            xmlns="http://javafx.com/javafx/23.0.1"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="org.saulsical.controller.ComprasController"
-            stylesheets="@../resource/comprasview.css">
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" styleClass="root" stylesheets="@../resource/comprasview.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.saulsical.controller.ComprasController">
 
     <children>
 
@@ -25,47 +31,28 @@
         </ImageView>
 
         <!-- Título -->
-        <Label layoutX="106.0" layoutY="14.0" prefHeight="66.0" prefWidth="157.0"
-               styleClass="label-title" text="COMPRA" textAlignment="CENTER">
+        <Label layoutX="106.0" layoutY="14.0" prefHeight="66.0" prefWidth="157.0" styleClass="label-title" text="COMPRA" textAlignment="CENTER">
             <font>
                 <Font name="Bell MT" size="30.0" />
             </font>
         </Label>
 
         <!-- Botón Regresar -->
-        <Button fx:id="btnRegresar"
-                contentDisplay="TOP"
-                layoutX="868.0" layoutY="11.0"
-                mnemonicParsing="false"
-                onAction="#clickManejadorEventos"
-                prefHeight="80.0" prefWidth="110.0"
-                styleClass="btnRegresar"
-                text="RETURN"
-                textFill="WHITE"
-                AnchorPane.rightAnchor="41.0">
+        <Button fx:id="btnRegresar" contentDisplay="TOP" layoutX="868.0" layoutY="11.0" mnemonicParsing="false" onAction="#clickManejadorEventos" prefHeight="66.0" prefWidth="97.0" styleClass="btnRegresar" text="RETURN" textFill="WHITE" AnchorPane.rightAnchor="54.0">
             <font>
                 <Font name="System Bold Italic" size="12.0" />
             </font>
-            <graphic>
-                <ImageView fitHeight="35.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@../image/return.png" />
-                    </image>
-                </ImageView>
-            </graphic>
+         <graphic>
+            <ImageView fitHeight="39.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagen/return.png" />
+               </image>
+            </ImageView>
+         </graphic>
         </Button>
 
-        <!-- Icono carrito -->
-        <ImageView fitHeight="61.0" fitWidth="50.0" layoutX="39.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@../image/carrito.png" />
-            </image>
-        </ImageView>
-
         <!-- GridPane con formulario -->
-        <GridPane layoutX="22.0" layoutY="91.0" prefHeight="217.0" prefWidth="957.0"
-                  styleClass="grid-pane" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="21.0"
-                  stylesheets="@../resource/facturaview.css">
+        <GridPane layoutX="22.0" layoutY="91.0" prefHeight="217.0" prefWidth="957.0" styleClass="grid-pane" stylesheets="@../resource/facturaview.css" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="21.0">
             <columnConstraints>
                 <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="156.0" minWidth="10.0" prefWidth="138.0" />
                 <ColumnConstraints fillWidth="false" halignment="LEFT" hgrow="SOMETIMES" maxWidth="351.0" minWidth="10.0" prefWidth="321.0" />
@@ -83,71 +70,71 @@
             </rowConstraints>
 
             <children>
-                <Label text="ID" GridPane.rowIndex="1" GridPane.columnIndex="0">
+                <Label text="ID" GridPane.columnIndex="0" GridPane.rowIndex="1">
                     <font><Font name="System Bold" size="15.0" /></font>
                 </Label>
-                <TextField fx:id="txtId" prefHeight="36.0" prefWidth="275.0" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+                <TextField fx:id="txtId" prefHeight="36.0" prefWidth="275.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
 
-                <Label text="FECHA" GridPane.rowIndex="2" GridPane.columnIndex="0">
+                <Label text="FECHA" GridPane.columnIndex="0" GridPane.rowIndex="2">
                     <font><Font name="System Bold" size="15.0" /></font>
                 </Label>
-                <DatePicker fx:id="dpFecha" prefHeight="36.0" prefWidth="275.0" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+                <DatePicker fx:id="dpFecha" prefHeight="36.0" prefWidth="275.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
 
-                <Label text="TOTAL" GridPane.rowIndex="2" GridPane.columnIndex="3">
+                <Label text="TOTAL" GridPane.columnIndex="3" GridPane.rowIndex="2">
                     <font><Font name="System Bold" size="15.0" /></font>
                 </Label>
-                <Spinner fx:id="spiTotal" prefHeight="31.0" prefWidth="204.0" GridPane.rowIndex="2" GridPane.columnIndex="4" />
+                <Spinner fx:id="spiTotal" prefHeight="31.0" prefWidth="204.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
 
-                <Label text="ESTADO COMPRA" GridPane.rowIndex="3" GridPane.columnIndex="0">
+                <Label text="ESTADO COMPRA" GridPane.columnIndex="0" GridPane.rowIndex="3">
                     <font><Font name="System Bold" size="15.0" /></font>
                 </Label>
-                <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="295.0" GridPane.rowIndex="3" GridPane.columnIndex="1">
+                <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="295.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                     <children>
                         <RadioButton fx:id="rbPendienteCompra" mnemonicParsing="false" prefHeight="19.0" prefWidth="95.0" text="PENDIENTE" textFill="WHITE">
                             <toggleGroup>
                                 <ToggleGroup fx:id="tgEstadoCompra" />
                             </toggleGroup>
                         </RadioButton>
-                        <RadioButton fx:id="rbCancelada" mnemonicParsing="false" prefHeight="19.0" prefWidth="102.0" text="CANCELADA" toggleGroup="$tgEstadoCompra" textFill="WHITE"/>
-                        <RadioButton fx:id="rbCompletada" mnemonicParsing="false" prefHeight="19.0" prefWidth="118.0" text="COMPLETADA" toggleGroup="$tgEstadoCompra" textFill="WHITE"/>
+                        <RadioButton fx:id="rbCancelada" mnemonicParsing="false" prefHeight="19.0" prefWidth="102.0" text="CANCELADA" textFill="WHITE" toggleGroup="$tgEstadoCompra" />
+                        <RadioButton fx:id="rbCompletada" mnemonicParsing="false" prefHeight="19.0" prefWidth="118.0" text="COMPLETADA" textFill="WHITE" toggleGroup="$tgEstadoCompra" />
                     </children>
                 </HBox>
 
-                <Label text="PAGO" GridPane.rowIndex="1" GridPane.columnIndex="3">
+                <Label text="PAGO" GridPane.columnIndex="3" GridPane.rowIndex="1">
                     <font><Font name="System Bold" size="15.0" /></font>
                 </Label>
-                <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0" GridPane.rowIndex="1" GridPane.columnIndex="4">
+                <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
                     <children>
                         <RadioButton fx:id="rbEfectivo" mnemonicParsing="false" prefHeight="17.0" prefWidth="97.0" text="EFECTIVO" textFill="WHITE">
                             <toggleGroup>
                                 <ToggleGroup fx:id="tgEstadoPago" />
                             </toggleGroup>
                         </RadioButton>
-                        <RadioButton fx:id="rbTarjeta" mnemonicParsing="false" prefHeight="17.0" prefWidth="91.0" text="TARJETA" toggleGroup="$tgEstadoPago" textFill="WHITE"/>
+                        <RadioButton fx:id="rbTarjeta" mnemonicParsing="false" prefHeight="17.0" prefWidth="91.0" text="TARJETA" textFill="WHITE" toggleGroup="$tgEstadoPago" />
                     </children>
                 </HBox>
 
-                <Label text="CLIENTE" GridPane.rowIndex="4" GridPane.columnIndex="0">
+                <Label text="CLIENTE" GridPane.columnIndex="0" GridPane.rowIndex="4">
                     <font><Font name="System Bold" size="15.0" /></font>
                 </Label>
-                <ComboBox fx:id="cbxCliente" prefHeight="32.0" prefWidth="284.0" GridPane.rowIndex="4" GridPane.columnIndex="1" />
+                <ComboBox fx:id="cbxCliente" prefHeight="32.0" prefWidth="284.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
 
-                <Label text="EMPLEADO" GridPane.rowIndex="3" GridPane.columnIndex="3">
+                <Label text="EMPLEADO" GridPane.columnIndex="3" GridPane.rowIndex="3">
                     <font><Font name="System Bold" size="15.0" /></font>
                 </Label>
-                <ComboBox fx:id="cbxEmpleado" prefHeight="32.0" prefWidth="222.0" GridPane.rowIndex="3" GridPane.columnIndex="4" />
+                <ComboBox fx:id="cbxEmpleado" prefHeight="32.0" prefWidth="222.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
 
-                <Button fx:id="btnReporte" mnemonicParsing="false" prefHeight="43.0" prefWidth="117.0" styleClass="btnRegresar" text="REPORTE" textFill="WHITE" GridPane.rowIndex="5" GridPane.columnIndex="4">
+                <Button fx:id="btnReporte" mnemonicParsing="false" prefHeight="43.0" prefWidth="117.0" styleClass="btnRegresar" text="REPORTE" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="5">
                     <font><Font name="System Bold Italic" size="12.0" /></font>
                 </Button>
 
-                <Button fx:id="btnAnteriorGrid" mnemonicParsing="false" onAction="#btnAnteriorAccion" text="&lt;&lt;&lt;" GridPane.rowIndex="5" GridPane.columnIndex="0" />
+                <Button fx:id="btnAnteriorGrid" mnemonicParsing="false" onAction="#btnAnteriorAccion" text="&lt;&lt;&lt;" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+              <Button fx:id="btnAnteriorPrincipal" mnemonicParsing="false" onAction="#btnAnteriorAccion" prefHeight="23.0" prefWidth="41.0" text="&lt;&lt;&lt;" GridPane.rowIndex="5" />
             </children>
         </GridPane>
 
         <!-- Tabla Compras -->
-        <TableView fx:id="tablaCompras" layoutX="27.0" layoutY="330.0" prefHeight="341.0" prefWidth="932.0" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="41.0"
-                   stylesheets="@../resource/facturaview.css">
+        <TableView fx:id="tablaCompras" layoutX="27.0" layoutY="330.0" prefHeight="341.0" prefWidth="932.0" stylesheets="@../resource/facturaview.css" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="41.0">
             <columns>
                 <TableColumn fx:id="colId" prefWidth="75.0" text="ID" />
                 <TableColumn fx:id="colFecha" prefWidth="152.0" text="FECHA" />
@@ -167,14 +154,11 @@
         <Button fx:id="btnEditar" layoutX="337.0" layoutY="262.0" mnemonicParsing="false" onAction="#editarCompra" prefHeight="23.0" prefWidth="58.0" text="EDITAR" />
         <Button fx:id="btnEliminar" layoutX="403.0" layoutY="262.0" mnemonicParsing="false" onAction="#EliminarCancelar" prefHeight="23.0" prefWidth="69.0" text="ELIMINAR" />
         <Button fx:id="btnSiguiente" layoutX="106.0" layoutY="262.0" mnemonicParsing="false" onAction="#btnSiguienteAccion" prefHeight="23.0" prefWidth="41.0" text="&gt;&gt;&gt;" />
-        <Button fx:id="btnAnteriorPrincipal" layoutX="13.0" layoutY="266.0" mnemonicParsing="false" onAction="#btnAnteriorAccion" prefHeight="23.0" prefWidth="41.0" text="&lt;&lt;&lt;" />
-
-        <!-- Icono compras (carrito) pequeño -->
-        <ImageView fitHeight="61.0" fitWidth="50.0" layoutX="39.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@../image/compras.png" />
-            </image>
-        </ImageView>
+      <ImageView fitHeight="61.0" fitWidth="69.0" layoutX="14.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagen/compras.png" />
+         </image>
+      </ImageView>
 
     </children>
 

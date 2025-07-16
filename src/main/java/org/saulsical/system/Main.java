@@ -11,9 +11,11 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import org.saulsical.controller.ComprasController;
+import org.saulsical.controller.Factura1Controller;
 import org.saulsical.controller.LoginController;
 import org.saulsical.controller.MenuPrincipalController;
 import org.saulsical.controller.MenuPrincipalController;
+import org.saulsical.controller.ProductosController;
 
 /**
  * Clase principal de la aplicación
@@ -80,12 +82,33 @@ public class Main extends Application {
             ex.printStackTrace();
         }
     }
+    
     public void getComprasView() {
         try {
             ComprasController control = (ComprasController) cambiarEscena("ComprasView.fxml", 1000, 900);
             control.setPrincipal(this);
         } catch (Exception ex) {
             System.out.println("Error al ir a Compras: " + ex.getMessage());
+            ex.printStackTrace();
+        }
+    }
+    
+    public void getFacturasView() {
+        try {
+            Factura1Controller control = (Factura1Controller) cambiarEscena("Factura1View.fxml", 1000, 900);
+            control.setPrincipal(this);
+        } catch (Exception ex) {
+            System.out.println("Error al ir a Facturas: " + ex.getMessage());
+            ex.printStackTrace();
+        }
+    }
+    
+    public void getProductosView() {
+        try {
+            ProductosController control = (ProductosController) cambiarEscena("ProductosView.fxml", 1000, 900);
+            control.setPrincipal(this);
+        } catch (Exception ex) {
+            System.out.println("Error al ir a Productos: " + ex.getMessage());
             ex.printStackTrace();
         }
     }

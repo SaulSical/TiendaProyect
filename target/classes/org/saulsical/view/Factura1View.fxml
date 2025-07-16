@@ -114,7 +114,7 @@
             <Image url="@../imagen/compras.png" />
          </image>
       </ImageView>
-        <Button fx:id="btnRegresar" layoutX="1392.0" layoutY="38.0" mnemonicParsing="false" onAction="#btnRegresarActionEvent" styleClass="buttonRegresar" text="REGRESAR" />
+        <Button fx:id="btnRegresar" layoutX="355.0" layoutY="63.0" mnemonicParsing="false" onAction="#btnRegresarActionEvent" styleClass="buttonRegresar" text="REGRESAR" />
         <TableView layoutX="787.0" layoutY="141.0" prefHeight="565.0" prefWidth="719.0">
             <columns>
                 <TableColumn prefWidth="97.0" text="ID" />

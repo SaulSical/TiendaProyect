@@ -1,7 +1,103 @@
-/*
- * Empty Stylesheet file.
- */
+/* facturaview.css */
 
-.mainFxmlClass {
+/* Style for the table itself */
+.table-view {
+    -fx-base: #202020; /* Dark background for the table */
+    -fx-control-inner-background: #202020;
+    -fx-background-color: #202020;
+    -fx-table-cell-border-color: #404040; /* Border color for cells */
+    -fx-table-header-border-color: #404040; /* Border color for header */
+    -fx-padding: 5;
+}
 
+/* Style for the table column headers */
+.table-view .column-header-background {
+    -fx-background-color: #303030; /* Slightly lighter dark for headers */
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white; /* White text for column headers */
+    -fx-font-weight: bold;
+}
+
+/* Style for the table rows */
+.table-view .table-row-cell {
+    -fx-background-color: #282828; /* Dark background for rows */
+    -fx-text-fill: white; /* Default text color for rows */
+}
+
+/* Style for individual cells within the table */
+.table-view .table-cell {
+    -fx-text-fill: white; /* This is the key part: sets data text color to white */
+    -fx-alignment: CENTER_LEFT; /* Align text to the left */
+    -fx-font-size: 13px; /* Adjust font size if needed */
+}
+
+/* Style for selected row */
+.table-view .table-row-cell:selected {
+    -fx-background-color: #FFA500; /* Orange background for selected row */
+    -fx-text-fill: black; /* Black text for selected row to ensure contrast */
+}
+
+/* Style for odd rows (optional, for alternating row colors) */
+.table-view .table-row-cell:odd {
+    -fx-background-color: #353535; /* Slightly different dark for odd rows */
+}
+
+/* Style for hover effect on rows */
+.table-view .table-row-cell:hover {
+    -fx-background-color: #505050; /* Lighter dark on hover */
+}
+/* Fondo del AnchorPane */
+.root {
+    -fx-background-color: #1e1e2f;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+/* GridPane que contiene los campos */
+.grid-pane {
+    -fx-background-color: #2c2c3e;
+    -fx-padding: 20px;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.75), 10, 0.2, 0, 4);
+}
+
+/* Labels de texto */
+.label {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-label-padding: 5px;
+}
+
+/* Campos de texto */
+.text-field {
+    -fx-background-color: #3a3a50;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: #cccccc;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-border-color: transparent;
+    -fx-font-size: 14px;
+}
+
+/* Botón de ingreso */
+.button.btnRegresar {
+    -fx-background-color: #00b894;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 4, 0.2, 0, 2);
+    -fx-font-size: 14px;
+}
+
+/* Hover del botón */
+.button.btnRegresar:hover {
+    -fx-background-color: #00cec9;
+}
+
+/* Botón presionado */
+.button.btnRegresar:pressed {
+    -fx-background-color: #019875;
 }
