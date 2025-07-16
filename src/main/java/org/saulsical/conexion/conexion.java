@@ -12,7 +12,7 @@ public class Conexion {
     private static Conexion instancia;
     private Connection conexion;
     private String url = "jdbc:mysql://127.0.0.1:3306/DBTiendaVideojuegos?userSSL=false";
-    private String user = "quintov";
+    private String user = "SaulSical";
     private String password = "admin";
     private String driver = "com.mysql.jdbc.Driver";
 
