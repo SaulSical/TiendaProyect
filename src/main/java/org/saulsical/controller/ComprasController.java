@@ -447,7 +447,7 @@ public class ComprasController implements Initializable {
     public void clickManejadorEventos(ActionEvent evento){
         if (evento.getSource() == btnRegresar) {
             System.out.println(" cerrando, adios. ");
-            principal.getLoginView();
+            principal.getMenuPrincipalView();
         } 
     }
     

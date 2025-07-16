@@ -9,6 +9,8 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.MenuItem;
 import org.saulsical.system.Main;
 
 /**
@@ -17,7 +19,8 @@ import org.saulsical.system.Main;
  * @author denis
  */
 public class MenuPrincipalController implements Initializable {
-
+    @FXML private Button btnEmpleados,btnCompras,btnFacturas;
+    @FXML private MenuItem itemCerrar;
     private Main principal;
 
     public void setPrincipal(Main principal) {
@@ -33,7 +36,17 @@ public class MenuPrincipalController implements Initializable {
     @FXML
     private void clickManejadorEventos(ActionEvent event) {
         // Aquí va la lógica de respuesta a los botones y menús
-        System.out.println("Evento detectado: " + event.getSource());
+        if (event.getSource() == btnFacturas) {
+                principal.getFacturasView();
+            }else if(event.getSource()== btnEmpleados){
+                principal.getProductosView();
+            }else if (event.getSource()== btnCompras){
+                principal.getComprasView();
+            
+            }else if (event.getSource()== itemCerrar){
+                principal.getLoginView();
+            }
+        }
     }
     
-}
+
